@@ -1,13 +1,29 @@
 import './ExpenseItem.css';
 
-const ExpenseItem = () => (
-  <div className="expense-item">
-    <div>27 September 2022</div>
-    <div className="expense-item__description">
-      <h2>Telegram Ad</h2>
-      <div className="expense-item__price">$52</div>
+interface IExpenseItemData {
+  title: string;
+  amount: number;
+  date: Date;
+}
+
+const ExpenseItem = ({ data }: { data: IExpenseItemData }) => {
+  const { title: expenseTitle, amount: expenseAmount, date: expenseDate } = data;
+
+  return (
+    <div className="expense-item">
+      <div>
+        {expenseDate.toLocaleDateString('us-US', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </div>
+      <div className="expense-item__description">
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">${expenseAmount}</div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ExpenseItem;
