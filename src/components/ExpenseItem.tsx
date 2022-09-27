@@ -1,3 +1,4 @@
+import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
 interface IExpenseItemData {
@@ -11,13 +12,7 @@ const ExpenseItem = ({ data }: { data: IExpenseItemData }) => {
 
   return (
     <div className="expense-item">
-      <div>
-        {expenseDate.toLocaleDateString('us-US', {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric',
-        })}
-      </div>
+      <ExpenseDate date={expenseDate} />
       <div className="expense-item__description">
         <h2>{expenseTitle}</h2>
         <div className="expense-item__price">${expenseAmount}</div>
