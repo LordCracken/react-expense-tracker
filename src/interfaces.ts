@@ -11,3 +11,15 @@ export interface IExpenseItemData {
   amount: number;
   date: Date;
 }
+
+export interface IExpenses {
+  items: IExpenseItemData[];
+}
+
+export interface IExpenseItem {
+  data: IExpenseItemData;
+}
+
+export interface IExpenseDate {
+  date: Date;
+}

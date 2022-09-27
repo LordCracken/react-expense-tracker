@@ -1,14 +1,15 @@
 import './Expenses.css';
+import Card from './Card';
 import ExpenseItem from './ExpenseItem';
-import { IExpenseItemData } from '../interfaces';
+import { IExpenses } from '../interfaces';
 
-const Expenses = ({ items }: { items: IExpenseItemData[] }) => (
-  <div className="expenses">
+const Expenses = ({ items }: IExpenses) => (
+  <Card className="expenses">
     {items.map((expense) => {
       const data = { title: expense.title, amount: expense.amount, date: expense.date };
       return <ExpenseItem key={expense.id} data={data} />;
     })}
-  </div>
+  </Card>
 );
 
 export default Expenses;
