@@ -1,5 +1,5 @@
 import './ExpenseDate.css';
-import { IExpenseDate } from '../interfaces';
+import { IExpenseDate } from '../../interfaces';
 
 const ExpenseDate = ({ date }: IExpenseDate) => {
   const month = date.toLocaleString('en-US', { month: 'long' });

@@ -1,5 +1,5 @@
 import './Card.css';
-import { ICard } from '../interfaces';
+import { ICard } from '../../interfaces';
 
 const Card = ({ children, className }: ICard) => {
   const classes = `card ${className}`;

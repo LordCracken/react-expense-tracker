@@ -1,7 +1,7 @@
 import './Expenses.css';
-import Card from './Card';
+import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
-import { IExpenses } from '../interfaces';
+import { IExpenses } from '../../interfaces';
 
 const Expenses = ({ items }: IExpenses) => (
   <Card className="expenses">
