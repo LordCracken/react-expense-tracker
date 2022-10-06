@@ -1,5 +1,6 @@
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
+import { IExpenseItemData } from './interfaces';
 
 const App = () => {
   const expenses = [
@@ -24,9 +25,13 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense: IExpenseItemData) => {
+    console.log(expense);
+  };
+
   return (
     <>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </>
   );

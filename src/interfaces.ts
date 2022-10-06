@@ -23,3 +23,11 @@ export interface IExpenseItem {
 export interface IExpenseDate {
   date: Date;
 }
+
+export interface INewExpense {
+  onAddExpense: (expense: IExpenseItemData) => void;
+}
+
+export interface IExpenseForm {
+  onSaveExpenseData: (expenseData: IExpenseItemData) => void;
+}
