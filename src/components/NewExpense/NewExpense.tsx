@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import './NewExpense.css';
+
 import ExpenseForm from './ExpenseForm';
+
 import { IExpenseItemData, INewExpense } from '../../interfaces';
+import './NewExpense.css';
 
 const NewExpense = ({ onAddExpense }: INewExpense) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);

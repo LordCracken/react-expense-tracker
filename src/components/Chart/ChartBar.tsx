@@ -1,5 +1,5 @@
-import './ChartBar.css';
 import { IDataPoint } from '../../interfaces';
+import './ChartBar.css';
 
 const ChartBar = ({ value, maxValue, label }: IDataPoint) => {
   let barFillHeight = 0;

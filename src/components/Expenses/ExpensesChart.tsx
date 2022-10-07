@@ -1,4 +1,5 @@
 import Chart from '../Chart/Char';
+
 import { IDataPoint, IExpensesChart } from '../../interfaces';
 
 const ExpensesChart = ({ expenses }: IExpensesChart) => {

@@ -1,6 +1,7 @@
 import { ChangeEvent } from 'react';
-import './ExpensesFilter.css';
+
 import { IExpensesFilter } from '../../interfaces';
+import './ExpensesFilter.css';
 
 const ExpensesFilter = ({ currentYear, selectedYear, onFilterChange }: IExpensesFilter) => {
   const dropdownChangeHandler = (event: ChangeEvent<HTMLSelectElement>) => {

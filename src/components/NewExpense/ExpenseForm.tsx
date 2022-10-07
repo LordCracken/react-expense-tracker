@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
-import './ExpenseForm.css';
+
 import { IExpenseForm } from '../../interfaces';
+import './ExpenseForm.css';
 
 const ExpenseForm = ({ onSaveExpenseData, onCancel }: IExpenseForm) => {
   const [enteredTitle, setEnteredTitle] = useState<string>('');

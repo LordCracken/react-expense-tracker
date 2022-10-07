@@ -1,6 +1,7 @@
-import './ExpensesList.css';
 import ExpenseItem from './ExpenseItem';
+
 import { IExpenseItemData, IExpenses } from '../../interfaces';
+import './ExpensesList.css';
 
 const ExpensesList = ({ items }: IExpenses) => {
   if (items.length === 0) {

@@ -1,7 +1,8 @@
-import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
-import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
+
 import { IExpenseItem } from '../../interfaces';
+import './ExpenseItem.css';
 
 const ExpenseItem = ({ data }: IExpenseItem) => {
   const { title: expenseTitle, amount: expenseAmount, date: expenseDate } = data;

@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import './Expenses.css';
+
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
 import ExpensesChart from './ExpensesChart';
 import ExpensesList from './ExpensesList';
+
 import { IExpenseItemData, IExpenses } from '../../interfaces';
+import './Expenses.css';
 
 const Expenses = ({ items }: IExpenses) => {
   const date = new Date();

@@ -1,6 +1,7 @@
-import './Chart.css';
 import ChartBar from './ChartBar';
+
 import { IChart, IDataPoint } from '../../interfaces';
+import './Chart.css';
 
 const Chart = ({ dataPoints }: IChart) => {
   const dataPointValues = dataPoints.map((dataPoint) => dataPoint.value);
