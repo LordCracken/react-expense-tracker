@@ -29,7 +29,7 @@ const App = () => {
   const [expenses, setExpenses] = useState<IExpenseItemData[]>(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense: IExpenseItemData) => {
-    setExpenses(prevState => [expense, ...prevState]);
+    setExpenses((prevState) => [expense, ...prevState]);
   };
 
   return (

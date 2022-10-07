@@ -38,3 +38,17 @@ export interface IExpensesFilter {
   selectedYear: number;
   onFilterChange: (selectedYear: number) => void;
 }
+
+export interface IDataPoint {
+  value: number;
+  label: string;
+  maxValue?: number | null;
+}
+
+export interface IChart {
+  dataPoints: IDataPoint[];
+}
+
+export interface IExpensesChart {
+  expenses: IExpenseItemData[];
+}
