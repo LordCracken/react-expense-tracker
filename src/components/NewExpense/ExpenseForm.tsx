@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 import './ExpenseForm.css';
 import { IExpenseForm } from '../../interfaces';
 
-const ExpenseForm = ({ onSaveExpenseData }: IExpenseForm) => {
+const ExpenseForm = ({ onSaveExpenseData, onCancel }: IExpenseForm) => {
   const [enteredTitle, setEnteredTitle] = useState<string>('');
   const [enteredAmount, setEnteredAmount] = useState<string>('');
   const [enteredDate, setEnteredDate] = useState<string>('');
@@ -63,6 +63,9 @@ const ExpenseForm = ({ onSaveExpenseData }: IExpenseForm) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

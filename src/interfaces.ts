@@ -30,6 +30,7 @@ export interface INewExpense {
 
 export interface IExpenseForm {
   onSaveExpenseData: (expenseData: IExpenseItemData) => void;
+  onCancel: () => void;
 }
 
 export interface IExpensesFilter {
