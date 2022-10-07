@@ -31,3 +31,9 @@ export interface INewExpense {
 export interface IExpenseForm {
   onSaveExpenseData: (expenseData: IExpenseItemData) => void;
 }
+
+export interface IExpensesFilter {
+  currentYear: number;
+  selectedYear: number;
+  onFilterChange: (selectedYear: number) => void;
+}
